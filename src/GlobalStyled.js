@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle `
   	font: inherit;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   	vertical-align: baseline;
+    -webkit-font-smoothing: antialiased !important;
   }
   article, aside, details, figcaption, figure, 
   footer, header, hgroup, menu, nav, section {

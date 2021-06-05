@@ -1,14 +1,14 @@
-import { ProductsGrid, Div, RedButton, GreenButton } from './style'
+import { ProductsGrid, Div, FirstWhiteButton, SecondBlackButton } from './style'
 import { useSelector, useDispatch } from 'react-redux'
 import { AddProductToCartThunk } from '../../Store/modules/Cart/thunk'
 
-export const DisplayProducts = () => {
+export const DisplayProducts = ({ filteredProducts }) => {
 
-  const { Products, Cart } = useSelector( (store) => store )
+  const { Cart } = useSelector( (store) => store )
   const dispatch = useDispatch()
 
   const printProducts = (el, i) => {
-    // debugger
+
     const alreadyHas = Cart.some((cartSomeElement) => {
       return el.name === cartSomeElement.name
     })
@@ -17,7 +17,7 @@ export const DisplayProducts = () => {
 
     return (
 
-      <Div justify = 'center' alignItems = 'center' >
+      <Div>
         <img src = {el.image} alt = {i} />
         <p>{el.name}</p>
         <span>{el.price}</span>
@@ -25,17 +25,17 @@ export const DisplayProducts = () => {
           !alreadyHas 
           ?
           (
-            <RedButton 
+            <FirstWhiteButton 
             onClick={() => dispatch(AddProductToCartThunk(el))} 
             variant='contained' color='secondary' 
             > Adicionar ao Carrinho
-            </RedButton> 
+            </FirstWhiteButton> 
           ) : (
-            <GreenButton 
+            <SecondBlackButton 
             onClick={() => dispatch(AddProductToCartThunk(el))} 
             variant='contained' color='secondary' 
             > Adicionar mais um
-            </GreenButton>
+            </SecondBlackButton>
           )
         }
       </Div>
@@ -45,7 +45,7 @@ export const DisplayProducts = () => {
   return (
     <ProductsGrid container justify = 'space-evenly' alignItems = 'center' wrap = 'wrap' >
 
-        { Products && Products.map(printProducts) }
+        { filteredProducts && filteredProducts.map(printProducts) }
 
     </ProductsGrid>
   )

@@ -1,4 +1,4 @@
-import { GridHeader, CommunGridOne, CommunDiv, Div, H1, Svg } from './style'
+import { GridHeader, CommunGridOne, CommunDiv, Div, H1, Svg, NavigationDiv, StyledLink } from './style'
 import { useHistory } from 'react-router-dom'
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined'
 import { useSelector } from 'react-redux'
@@ -23,7 +23,7 @@ export const Header = () => {
         <H1 onClick={handleClickHome} >PhoneShop</H1>
         <CommunDiv>
           <Div onClick={handleClickCart} >
-            <ShoppingCartOutlinedIcon fontSize = 'large'>
+            <ShoppingCartOutlinedIcon fontSize='large' style={{color: 'white'}} >
             </ShoppingCartOutlinedIcon> 
             <Svg>
             {Cart.length > 0 &&
@@ -38,6 +38,13 @@ export const Header = () => {
           {/* <Div>Entrar</Div> */}
         </CommunDiv>
       </CommunGridOne>
+      <NavigationDiv>
+        <div>
+          <StyledLink to='/' >Home</StyledLink>
+          <StyledLink to='/' >Smartphones</StyledLink>
+          <StyledLink to='/' >Notebooks</StyledLink>
+        </div>
+      </NavigationDiv>
     </GridHeader>
   )
 }
