@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import { Button } from '@material-ui/core'
+import { Button, Paper, Typography } from '@material-ui/core'
+import { styled as materialStyled } from '@material-ui/core/styles'
+import CongratsImage from '../../Assets/congratulations_image.jpg'
 
 export const DivTotal = styled.div `
   width: 80%;
@@ -55,10 +57,15 @@ export const H2 = styled.h2 `
   font-weight: 500;
 `
 
-export const StyledButton = styled(Button) `
-  text-transform: unset !important;
-  margin-top: 5% !important;
-`
+export const StyledButton = materialStyled(Button)({
+
+  textTransform: 'unset',
+  marginTop: '5%',
+  backgroundColor: 'green',
+  '&:hover': {
+    backgroundColor: 'green',
+  }
+})
 
 export const ProductSubTotalListDiv = styled.div `
   width: 100%;
@@ -87,3 +94,29 @@ export const P3 = styled.p `
   font-weight: 300;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
+
+export const ModalDiv = styled.div `
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.3);
+`
+
+export const ModalPaper = materialStyled(Paper) ({
+  width: '50%',
+  height: '40%',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+})
+
+export const ModalTypography = styled(Typography) ({
+  color: 'black',
+})

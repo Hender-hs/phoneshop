@@ -27,7 +27,7 @@ export const DisplayProducts = ({ filteredProducts }) => {
           (
             <FirstWhiteButton 
             onClick={() => dispatch(AddProductToCartThunk(el))} 
-            variant='contained' color='secondary' 
+            variant='contained' color='secondary'
             > Adicionar ao Carrinho
             </FirstWhiteButton> 
           ) : (

@@ -88,7 +88,9 @@ export const Home = () => {
             </Div>
           </CheckboxDivs>
         </FilterProducts>
+
         <DisplayProducts filteredProducts={filteredProducts} />
+        
       </BodyGrid>
     </MainGrid>
   )

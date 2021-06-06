@@ -1,16 +1,16 @@
 import styled from 'styled-components'
-import { Grid, Button } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
+import { styled as materialStyled } from '@material-ui/core/styles'
 
-export const MainGridContainer = styled(Grid) `
-  width: 100% !important;
-  height: 100% !important;
-  /* background-color: gray !important; */
-`
+export const MainGridContainer = materialStyled(Grid) ({
+  width: '100%',
+  height: '95%',
+  margin: '15rem 0',
+})
 
 export const LeftDiv = styled.div `
   width: 70%;
   height: 100%;
-  /* background-color: rebeccapurple; */
 
   display: flex;
   justify-content: center;
@@ -20,7 +20,6 @@ export const DivListOfCart = styled.div `
     margin-top: 3%;
     width: 97%;
     height: 80%;
-    /* background-color: gray; */
 
     display: flex;
     flex-direction: column;
@@ -31,7 +30,6 @@ export const DivListOfCart = styled.div `
 export const RightDiv = styled.div `
   width: 30%;
   height: 100%;
-  /* background-color: royalblue; */
 
   display: flex;
   justify-content: center;
@@ -41,40 +39,33 @@ export const DivTotal = styled.div `
     margin-top: 3%;
     width: 97%;
     height: 80%;
-    /* background-color: rosybrown; */
 
     display: flex;
     justify-content: center;
 `
 
-export const EachProductDiv = styled(Grid) `
-  width: 90% !important;
-  max-height: 20% !important;
+export const EachProductDiv = materialStyled(Grid) ({
+  width: '90%',
+  maxHeight: '20%',
+  padding: '2%',
+  borderRadius: '10px',
+  margin: '0.5% 0',
+}) 
 
-  padding: 2%;
-  border-radius: 10px;
-  margin: 0.5% 0 !important;
-  /* background-color: green !important; */
-
-  .ImgDiv {
-    width: 10%;
-    height: 100%;
-  }
-
-  img {
-    height: 100%;
-  }
-  p {
-    /* background-color: wheat; */
+export const ImgDiv = styled.div `
+  width: 10%;
+  height: 100%;
+`
+export const Img = styled.img `
+  height: 100%;
+`
+export const P = styled.p `
     width: 45%;
     text-align: center;
-  }
-  span {
-    width: 5%;
-    text-align: end;
-    /* background-color: wheat; */
-  }
-
+`
+export const Span = styled.span `
+  width: 5%;
+  text-align: end;
 `
 
 export const RemoveToCartButton = styled.button `

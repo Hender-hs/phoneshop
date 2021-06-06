@@ -1,39 +1,38 @@
 import styled from 'styled-components'
 import { Grid } from '@material-ui/core'
 import { Link } from 'react-router-dom'
+import { styled as materialStyled } from '@material-ui/core/styles'
 
-export const GridHeader = styled(Grid) `
-  width: 100%;
-  height: 18%;
-  background-color: black;
-`
+export const GridHeader = materialStyled(Grid) ({
+  width: '100%',
+  height: '18%',
+  backgroundColor: 'black',
+  position: 'fixed',
+  zIndex: '1',
+})
 
-export const CommunGridOne = styled(Grid) `
-  width: 98% !important;  
-  height: 70%;
-  /* background-color: gold; */
-`
+export const CommunGridOne = materialStyled(Grid) ({
+  width: '98%',  
+  height: '70%',
+})
 
-export const NavigationDiv = styled(Grid) `
-  width: 100% !important;  
-  height: 30%;
-  /* border: 1px 1px solid rgb(0, 0, 0); */
-  box-shadow: 0px 1px 0px black;
-  background-color: white;
+export const NavigationDiv = materialStyled(Grid) ({
+  width: '100%',  
+  height: '30%',
+  boxShadow: '0px 1px 0px black',
+  backgroundColor: 'white',
+})
 
-  div {
-    /* background-color: red; */
-    width: 20%;
-    height: 100%;
+export const NavDiv = styled.div `
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
 `
 
 export const CommunDiv = styled.div `
-  /* background-color: gainsboro; */
   width: 25%;
   height: 80%;
   display: flex;
@@ -43,11 +42,9 @@ export const CommunDiv = styled.div `
 
 export const Div = styled.div `
   cursor: pointer;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-size: 110%;
   font-weight: 600;
   font-style: oblique;
@@ -63,7 +60,6 @@ export const H1 = styled.h1 `
 export const Svg = styled.svg `
   width: 50px;
   height: 70px;
-
   position: relative;
   bottom: 0%;
   left: -40%;

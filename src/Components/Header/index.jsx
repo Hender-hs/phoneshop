@@ -1,4 +1,4 @@
-import { GridHeader, CommunGridOne, CommunDiv, Div, H1, Svg, NavigationDiv, StyledLink } from './style'
+import { GridHeader, CommunGridOne, CommunDiv, Div, H1, Svg, NavigationDiv, StyledLink, NavDiv } from './style'
 import { useHistory } from 'react-router-dom'
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined'
 import { useSelector } from 'react-redux'
@@ -39,11 +39,11 @@ export const Header = () => {
         </CommunDiv>
       </CommunGridOne>
       <NavigationDiv>
-        <div>
+        <NavDiv>
           <StyledLink to='/' >Home</StyledLink>
           <StyledLink to='/' >Smartphones</StyledLink>
           <StyledLink to='/' >Notebooks</StyledLink>
-        </div>
+        </NavDiv>
       </NavigationDiv>
     </GridHeader>
   )
