@@ -1,14 +1,11 @@
 import styled from 'styled-components'
 import { Button, Paper, Typography } from '@material-ui/core'
 import { styled as materialStyled } from '@material-ui/core/styles'
-import CongratsImage from '../../Assets/congratulations_image.jpg'
 
 export const DivTotal = styled.div `
   width: 80%;
   min-height: 50%;
   min-height: 50%;
-  /* height: 50%; */
-  /* background-color: gray; */
   margin-top: 3%;
 
   display: flex;
@@ -19,8 +16,6 @@ export const DivTotal = styled.div `
 export const FirstDiv = styled.div `
   width: 80%;
   min-height: 25%;
-  /* height: 25%; */
-  /* background-color: salmon; */
   margin: 8% 0 2.5% 0;
   display: flex;
   flex-direction: column;
@@ -30,11 +25,9 @@ export const FirstDiv = styled.div `
 export const SecondDiv = styled.div `
   width: 80%;
   height: 11%;
-  /* background-color: saddlebrown; */
   margin-top: 4%;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
 
   p {
     color: rgb(0, 0, 0, 0.9);

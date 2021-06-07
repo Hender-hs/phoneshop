@@ -24,11 +24,15 @@ export const NavigationDiv = materialStyled(Grid) ({
 })
 
 export const NavDiv = styled.div `
-  width: 20%;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  @media(min-width: 600px) {
+    width: 20%;
+  }
 
 `
 

@@ -13,18 +13,22 @@ export const BodyGrid = materialStyled(Grid) ({
 })  
 
 export const FilterProducts = styled.div `
+    visibility: hidden;
 
-  width: 10%;
-  height: 30%;
+    width: 10%;
+    height: 30%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 
-  position: fixed;
-  left: 3%;
-  top: 35%;
+    position: fixed;
+    left: 3%;
+    top: 35%;
+  @media(min-width: 600px) {
+    visibility: visible;
+  }
 `
 
 export const Div = styled.div `

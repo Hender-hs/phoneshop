@@ -1,7 +1,6 @@
-import { DivTotal, FirstDiv, SecondDiv, Hr, H2, StyledButton, ProductSubTotalListDiv, P1, P2, P3, ModalDiv, ModalPaper, ModalTypography } from './style'
+import { DivTotal, FirstDiv, SecondDiv, H2, StyledButton, ProductSubTotalListDiv, P1, P2, P3, ModalDiv, ModalPaper, ModalTypography } from './style'
 import { useSelector } from 'react-redux'
 import { useState } from 'react'
-import { Zoom } from '@material-ui/core'
 
 export const DisplayTotalCart = () => {
 

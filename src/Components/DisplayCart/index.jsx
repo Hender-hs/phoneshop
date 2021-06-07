@@ -10,7 +10,7 @@ export const DisplayCart = () => {
   const dispatch = useDispatch()
 
   const printCartProducts = (el, i) => (
-    <EachProductDiv container justify = 'space-between' alignItems = 'center' >
+    <EachProductDiv container /*justify = 'space-between'*/ alignItems = 'center' >
       <ImgDiv className='ImgDiv'>
         <Img src = {el.image} alt = {i} />
       </ImgDiv>

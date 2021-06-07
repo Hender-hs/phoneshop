@@ -45,13 +45,6 @@ export const Home = () => {
     if (!filterApple && !filterMotorola && !filterLg && !filterSamsung) setFilteredProducts(Products)
   }, [filterApple, filterMotorola, filterLg, filterSamsung])
 
-  // useEffect(() => {
-  //   filterApple     ? setFilteredProducts(toFilterProducts('apple'))    : setFilteredProducts(Products)
-  //   filterMotorola  ? setFilteredProducts(toFilterProducts('motorola')) : setFilteredProducts(Products)
-  //   filterLg        ? setFilteredProducts(toFilterProducts('lg'))       : setFilteredProducts(Products)
-  //   filterSamsung   ? setFilteredProducts(toFilterProducts('samsung'))  : setFilteredProducts(Products)
-  // }, [filterApple, filterMotorola, filterLg, filterSamsung])
-
   const hadleTextFiled = (inputValue) => {
     setFilteredProducts(toFilterProducts(inputValue.target.value))
   }

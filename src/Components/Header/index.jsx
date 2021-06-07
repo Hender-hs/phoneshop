@@ -35,7 +35,6 @@ export const Header = () => {
               </Svg>
             
           </Div>
-          {/* <Div>Entrar</Div> */}
         </CommunDiv>
       </CommunGridOne>
       <NavigationDiv>
