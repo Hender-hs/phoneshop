@@ -41,11 +41,9 @@ export const DivListOfCart = styled.div `
 
     @media(min-width: 600px) {
       margin-top: 3%;
-
-      /* display: flex; */
-      /* flex-direction: column; */
+      width: 97%;
+      height: 80%;
       justify-content: flex-start;
-      /* align-items: center; */
     }
 `
 
@@ -57,6 +55,7 @@ export const RightDiv = styled.div `
 
   @media(min-width: 600px) {
     height: 100%;
+    width: 30%;
   }
 `
 
@@ -101,6 +100,8 @@ export const Img = styled.img `
   width: 100%;
 
   @media(min-width: 600px) {
+    width: auto;
+    height: 100%;
   }
 `
 export const P = styled.p `
@@ -110,6 +111,7 @@ export const P = styled.p `
   
   @media(min-width: 600px) {
     width: 45%;
+    font-size: unset;
   }
 `
 export const Span = styled.span `
@@ -120,6 +122,8 @@ export const Span = styled.span `
 
   @media(min-width: 600px) {
     width: 5%;
+    font-size: unset;
+    font-weight: 100;
   }
 `
 
@@ -134,9 +138,11 @@ export const RemoveToCartButton = styled.button `
   font-size: 60%;
 
   @media(min-width: 600px) {
-    width: 10%;
+    width: 8%;
+    height: 30%;
     font-weight: lighter;
     font-size: 1%;
+    font-size: unset;
   }
 `
 
@@ -180,6 +186,7 @@ export const DivQuantity = styled.div `
 
     input {
       width: 58%;
+      height: auto;
     }
   }
 `
