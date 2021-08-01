@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Button, Paper, Typography } from '@material-ui/core'
+import { Button, Modal, Paper, Typography } from '@material-ui/core'
 import { styled as materialStyled } from '@material-ui/core/styles'
 
 export const DivTotal = styled.div `
@@ -54,6 +54,13 @@ export const StyledButton = materialStyled(Button)({
 
   textTransform: 'unset',
   marginTop: '5%',
+  '&:hover': {
+  }
+})
+
+export const StyledButtonToHome = materialStyled(Button)({
+  textTransform: 'unset',
+  marginTop: '5%',
   backgroundColor: 'green',
   '&:hover': {
     backgroundColor: 'green',
@@ -88,17 +95,10 @@ export const P3 = styled.p `
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
 
-export const ModalDiv = styled.div `
-  position: absolute;
+export const ButtonsDiv = styled.div `
   width: 100%;
-  height: 110%;
-  top: 0;
-  left: 0;
-  z-index: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(0, 0, 0, 0.3);
+  justify-content: space-evenly;
 `
 
 export const ModalPaper = materialStyled(Paper) ({
@@ -112,4 +112,12 @@ export const ModalPaper = materialStyled(Paper) ({
 
 export const ModalTypography = styled(Typography) ({
   color: 'black',
+  textAlign: 'center',
+})
+
+export const StyledModal = styled(Modal) ({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+
 })

@@ -17,7 +17,7 @@ export const CommunGridOne = materialStyled(Grid) ({
 })
 
 export const NavigationDiv = materialStyled(Grid) ({
-  width: '100%',  
+  width: '100%',
   height: '30%',
   boxShadow: '0px 1px 0px black',
   backgroundColor: 'white',
@@ -31,6 +31,7 @@ export const NavDiv = styled.div `
   align-items: center;
 
   @media(min-width: 600px) {
+    justify-content: unset;
     width: 20%;
   }
 
@@ -78,4 +79,9 @@ export const StyledLink = styled(Link) `
   color: black;
   text-decoration: none;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  @media(min-width: 600px) {
+    width: auto;
+    margin-left: 8%;
+  }
 `

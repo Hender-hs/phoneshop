@@ -1,8 +1,13 @@
-import { DivTotal, FirstDiv, SecondDiv, H2, StyledButton, ProductSubTotalListDiv, P1, P2, P3, ModalDiv, ModalPaper, ModalTypography } from './style'
+import { DivTotal, FirstDiv, SecondDiv, H2, StyledButton, ProductSubTotalListDiv, P1, P2, P3 } from './style'
+import { ModalPaper, ModalTypography, ButtonsDiv, StyledButtonToHome, StyledModal } from './style'
+import { Fade } from '@material-ui/core'
 import { useSelector } from 'react-redux'
 import { useState } from 'react'
+import { useHistory } from 'react-router'
 
 export const DisplayTotalCart = () => {
+
+  const history = useHistory()
 
   const [openModal, setOpenModal] = useState(false)
 
@@ -17,7 +22,7 @@ export const DisplayTotalCart = () => {
   const showListOfCartInTheLeftSide = (el, i) => {
 
     return (
-      <ProductSubTotalListDiv>
+      <ProductSubTotalListDiv key ={i} >
         <P1> {el.quantity} {el.quantity > 1 ? 'produtos' : 'produto'} </P1>
         <P2>R$</P2>
         <P3>{el.price}</P3>
@@ -26,7 +31,11 @@ export const DisplayTotalCart = () => {
   }
 
   const hadleModal = () => {
-    setOpenModal(true)
+    setOpenModal(!openModal)
+  }
+
+  const redirectToHome = () => {
+    history.push('/')
   }
 
   return (
@@ -39,16 +48,17 @@ export const DisplayTotalCart = () => {
         <p>Total</p>
         <p>R${totalCartPrice}</p>
       </SecondDiv>
-      <StyledButton onClick={hadleModal} variant = 'contained' color = 'primary' >Finalizar Pedidos</StyledButton>
-      {
-        openModal
-        &&
-        <ModalDiv onClick={() => setOpenModal(false)} >
+      <ButtonsDiv>
+        <StyledButtonToHome onClick={redirectToHome} variant = 'contained' color = 'primary' >Voltar a Comprar</StyledButtonToHome>
+        <StyledButton onClick={hadleModal} variant = 'contained' color = 'secondary' >Finalizar Pedidos</StyledButton>
+      </ButtonsDiv>
+      <StyledModal open={openModal} onClose={hadleModal} >
+        <Fade in={openModal} >
           <ModalPaper >
             <ModalTypography variant='h3' >Compra Finalizada com Sucesso!</ModalTypography>
           </ModalPaper>
-        </ModalDiv>
-      }
+        </Fade>
+      </StyledModal>
     </DivTotal>
   )
 }

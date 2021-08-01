@@ -4,9 +4,9 @@ import { styled as materialStyled } from '@material-ui/core/styles'
 
 export const ProductsGrid = materialStyled(Grid)( ({ theme }) => ({
   width: '90%',
-  minHeight: '80%',
+  minHeight: '50%',
   transition: '1,5s',
-  margin: '12rem 0',
+  margin: '230px 0',
 
   display: 'flex',
   flexWrap: 'wrap',
@@ -14,6 +14,7 @@ export const ProductsGrid = materialStyled(Grid)( ({ theme }) => ({
   [theme.breakpoints.up('sm')]: {
     width: '70%',
     minHeight: '80%',
+    margin: '10rem 0',
   }
 }))
 export const Div = styled.div `
@@ -35,19 +36,19 @@ export const Div = styled.div `
   p {
     height: 20% !important;
     text-align: center;
-    font-size: 60%;
+    font-size: 80%;
   }
 
   span {
     height: 10% !important;
     text-align: center;
-    font-size: 60%;
+    font-size: 80%;
   }
 
   @media(min-width: 600px) {
 
-    width: 13vw;
-    height: 30vh;
+    width: 300px;
+    height: 300px;
     margin: 5% 2% 1% 0;
 
     img {
@@ -56,15 +57,17 @@ export const Div = styled.div `
 
     p {
       height: 20% !important;
+      font-size: 80%;
     }
 
     span {
       height: 10% !important;
+      font-size: 90%;
     }
   }
 `
 
-export const FirstWhiteButton = materialStyled(Button)( ({ theme }) => ({
+export const FirstButton = materialStyled(Button)( ({ theme }) => ({
   fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
   width: '80%',
   height: '15%',
@@ -72,7 +75,7 @@ export const FirstWhiteButton = materialStyled(Button)( ({ theme }) => ({
 }))
 
 
-export const SecondBlackButton = materialStyled(Button) ({
+export const SecondButton = materialStyled(Button) ({
   backgroundColor: 'green',
   width: '80%',
   height: '15%',

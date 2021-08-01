@@ -23,8 +23,6 @@ export const Home = () => {
 
   const toFilterProducts = (param) => Products.filter( (el) => el.name.toLowerCase().includes(param.toLowerCase()) )
 
-  console.log(filteredProducts)
-
   useEffect(() => {
     filterApple     && setFilteredProducts(toFilterProducts('apple'))   
   }, [filterApple])
