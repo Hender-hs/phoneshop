@@ -23,8 +23,6 @@ export const Home = () => {
 
   const toFilterProducts = (param) => Products.filter( (el) => el.name.toLowerCase().includes(param.toLowerCase()) )
 
-  console.log(filteredProducts)
-
   useEffect(() => {
     filterApple     && setFilteredProducts(toFilterProducts('apple'))   
   }, [filterApple])
@@ -44,13 +42,6 @@ export const Home = () => {
   useEffect(() => {
     if (!filterApple && !filterMotorola && !filterLg && !filterSamsung) setFilteredProducts(Products)
   }, [filterApple, filterMotorola, filterLg, filterSamsung])
-
-  // useEffect(() => {
-  //   filterApple     ? setFilteredProducts(toFilterProducts('apple'))    : setFilteredProducts(Products)
-  //   filterMotorola  ? setFilteredProducts(toFilterProducts('motorola')) : setFilteredProducts(Products)
-  //   filterLg        ? setFilteredProducts(toFilterProducts('lg'))       : setFilteredProducts(Products)
-  //   filterSamsung   ? setFilteredProducts(toFilterProducts('samsung'))  : setFilteredProducts(Products)
-  // }, [filterApple, filterMotorola, filterLg, filterSamsung])
 
   const hadleTextFiled = (inputValue) => {
     setFilteredProducts(toFilterProducts(inputValue.target.value))
@@ -88,7 +79,9 @@ export const Home = () => {
             </Div>
           </CheckboxDivs>
         </FilterProducts>
+
         <DisplayProducts filteredProducts={filteredProducts} />
+        
       </BodyGrid>
     </MainGrid>
   )

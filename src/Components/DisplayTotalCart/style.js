@@ -1,12 +1,11 @@
 import styled from 'styled-components'
-import { Button } from '@material-ui/core'
+import { Button, Modal, Paper, Typography } from '@material-ui/core'
+import { styled as materialStyled } from '@material-ui/core/styles'
 
 export const DivTotal = styled.div `
   width: 80%;
   min-height: 50%;
   min-height: 50%;
-  /* height: 50%; */
-  /* background-color: gray; */
   margin-top: 3%;
 
   display: flex;
@@ -17,8 +16,6 @@ export const DivTotal = styled.div `
 export const FirstDiv = styled.div `
   width: 80%;
   min-height: 25%;
-  /* height: 25%; */
-  /* background-color: salmon; */
   margin: 8% 0 2.5% 0;
   display: flex;
   flex-direction: column;
@@ -28,11 +25,9 @@ export const FirstDiv = styled.div `
 export const SecondDiv = styled.div `
   width: 80%;
   height: 11%;
-  /* background-color: saddlebrown; */
   margin-top: 4%;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
 
   p {
     color: rgb(0, 0, 0, 0.9);
@@ -55,10 +50,22 @@ export const H2 = styled.h2 `
   font-weight: 500;
 `
 
-export const StyledButton = styled(Button) `
-  text-transform: unset !important;
-  margin-top: 5% !important;
-`
+export const StyledButton = materialStyled(Button)({
+
+  textTransform: 'unset',
+  marginTop: '5%',
+  '&:hover': {
+  }
+})
+
+export const StyledButtonToHome = materialStyled(Button)({
+  textTransform: 'unset',
+  marginTop: '5%',
+  backgroundColor: 'green',
+  '&:hover': {
+    backgroundColor: 'green',
+  }
+})
 
 export const ProductSubTotalListDiv = styled.div `
   width: 100%;
@@ -87,3 +94,30 @@ export const P3 = styled.p `
   font-weight: 300;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
+
+export const ButtonsDiv = styled.div `
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+`
+
+export const ModalPaper = materialStyled(Paper) ({
+  width: '50%',
+  height: '40%',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+})
+
+export const ModalTypography = styled(Typography) ({
+  color: 'black',
+  textAlign: 'center',
+})
+
+export const StyledModal = styled(Modal) ({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+
+})

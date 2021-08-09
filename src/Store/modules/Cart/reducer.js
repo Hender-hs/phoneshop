@@ -2,7 +2,7 @@ import { ADD_PRODUCT, REMOVE_PRODUCT, INCREASE_PRODUCT, DECREASE_PRODUCT } from 
 import { localStorageName } from './localStorageName'
 
 const localStorageList = JSON.parse(localStorage.getItem(localStorageName)) || []
-console.log(localStorageList)
+
 export const Cart = (state = localStorageList, { type, payload }) => {
 
   switch (type) {
