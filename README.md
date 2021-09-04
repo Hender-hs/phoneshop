@@ -7,7 +7,7 @@
 * [Technologies and Libs Used](#technologies-and-libs-used)
 * [Features](#features)
 * [Project Status](#project-status)
-* [Coming Features](#coming-features)
+* [Features Ideas](#features-ideas)
 * [Contact](#contact)
 
 
@@ -42,7 +42,7 @@ Project is: _in progress_
 ## Features Ideas
 
 Ideas:
-- Let the web site more realistic like a e-commerce.
+- Make the web site more realistic like a e-commerce.
 
 
 ## Contact
