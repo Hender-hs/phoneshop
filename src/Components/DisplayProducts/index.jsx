@@ -1,4 +1,4 @@
-import { ProductsGrid, Div, FirstWhiteButton, SecondBlackButton } from './style'
+import { ProductsGrid, Div, FirstButton, SecondButton } from './style'
 import { useSelector, useDispatch } from 'react-redux'
 import { AddProductToCartThunk } from '../../Store/modules/Cart/thunk'
 
@@ -13,11 +13,9 @@ export const DisplayProducts = ({ filteredProducts }) => {
       return el.name === cartSomeElement.name
     })
 
-    console.log(alreadyHas)
-
     return (
 
-      <Div>
+      <Div key={i} >
         <img src = {el.image} alt = {i} />
         <p>{el.name}</p>
         <span>{el.price}</span>
@@ -25,17 +23,17 @@ export const DisplayProducts = ({ filteredProducts }) => {
           !alreadyHas 
           ?
           (
-            <FirstWhiteButton 
+            <FirstButton 
             onClick={() => dispatch(AddProductToCartThunk(el))} 
-            variant='contained' color='secondary' 
+            variant='contained' color='secondary'
             > Adicionar ao Carrinho
-            </FirstWhiteButton> 
+            </FirstButton> 
           ) : (
-            <SecondBlackButton 
+            <SecondButton 
             onClick={() => dispatch(AddProductToCartThunk(el))} 
             variant='contained' color='secondary' 
             > Adicionar mais um
-            </SecondBlackButton>
+            </SecondButton>
           )
         }
       </Div>

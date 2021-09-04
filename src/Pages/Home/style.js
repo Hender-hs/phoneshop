@@ -1,31 +1,34 @@
 import styled from 'styled-components'
 import { Grid, TextField } from '@material-ui/core'
+import { styled as materialStyled } from '@material-ui/core/styles'
 
-export const MainGrid = styled(Grid) `
-  max-width: 100vw;
-  height: 100vh;
-`
+export const MainGrid = materialStyled(Grid) ({
+  maxWidth: '100vw',
+  height: '100vh',
+})
 
-export const BodyGrid = styled(Grid) `
-  /* background-color: red; */
-  max-width: 100%;
-  min-height: 90%;
-`  
+export const BodyGrid = materialStyled(Grid) ({
+  maxWidth: '100%',
+  minHeight: '90%',
+})  
 
 export const FilterProducts = styled.div `
+    visibility: hidden;
 
-  width: 10%;
-  height: 30%;
-  /* background-color: green; */
+    width: 10%;
+    height: 30%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 
-  position: fixed;
-  left: 3%;
-  top: 35%;
+    position: fixed;
+    left: 3%;
+    top: 35%;
+  @media(min-width: 600px) {
+    visibility: visible;
+  }
 `
 
 export const Div = styled.div `
@@ -46,7 +49,6 @@ export const CheckboxDivs = styled.div `
 
   width: 60%;
   min-height: 40%;
-  /* background-color: red; */
 
   display: flex;
   flex-direction: column;
@@ -54,12 +56,12 @@ export const CheckboxDivs = styled.div `
   align-items: flex-start;
 `
 
-export const StyledTextField = styled(TextField) `
+export const StyledTextField = materialStyled(TextField) ({
 
-  &::placeholder {
-    font-size: 560% !important;
+  '&::placeholder': {
+    fontSize: '560%',
   }
-`
+})
 
 export const DivSearch = styled.div `
   width: 90%;
