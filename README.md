@@ -33,6 +33,7 @@
 ## Features
 Features avaible:
 - Add and remove phones and notebooks to/from cart and mutate the quantity of these.
+- Has a responsive mobile screen
 
 
 ## Project Status
